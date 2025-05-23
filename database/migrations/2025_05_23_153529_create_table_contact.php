@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('table_contact', function (Blueprint $table) {
+        Schema::create('contact', function (Blueprint $table) {
             $table->id();
+            $table->string('email');
+            $table->string('phone')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('proz')->nullable();
+            $table->text('additional_info')->nullable();
             $table->timestamps();
         });
     }
